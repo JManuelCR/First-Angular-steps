@@ -1,0 +1,10 @@
+<button class="btn btn-primary fs-4 rounded-3" (mousedown)="show = true; count.push('One click')" (mouseup)="show=false">Display Details</button>
+<p class="fs-3 fw-bold" *ngIf="show">Secret Password = tuna</p>
+<br><br>
+<div 
+*ngFor="let click of count; let i = index"
+[ngStyle]="{backgroundColor: i > 4 ? 'blue' : 'transparent'}"  
+[ngClass]="{fontWhite: i > 4}" class="fs-4 fw-semibold"  
+>
+One clieck
+</div>
